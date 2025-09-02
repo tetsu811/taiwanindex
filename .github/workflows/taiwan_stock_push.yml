@@ -1,4 +1,4 @@
-name: 台股分析每日推播
+name: 台股分析推播
 
 on:
   schedule:
