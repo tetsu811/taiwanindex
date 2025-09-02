@@ -1,0 +1,47 @@
+{
+  "timestamp": "20250829_171000",
+  "trading_dates": {
+    "today": "2025-08-29",
+    "prev": "2025-08-28"
+  },
+  "data": {
+    "index": {
+      "today": 24233.1,
+      "prev": 24236.45,
+      "today_time": "2025-08-29 13:30:00",
+      "prev_time": "2025-08-28 13:30:00"
+    },
+    "margin": {
+      "today": null,
+      "prev": 167.084
+    },
+    "futures": {
+      "today": null,
+      "prev": null
+    },
+    "foreign": {
+      "today": -268592469,
+      "prev": 19636410,
+      "today_buy": 1452997385,
+      "today_sell": 1721589854,
+      "prev_buy": 1608017748,
+      "prev_sell": 1588381338
+    },
+    "bank": {
+      "today": null,
+      "prev": 2872816580.310005,
+      "today_buy": null,
+      "today_sell": null,
+      "prev_buy": 55131303933.47,
+      "prev_sell": 52258487353.159996
+    },
+    "stock": {
+      "today": {
+        "twse": 1837,
+        "tpex": 968,
+        "total": 3161
+      },
+      "prev": null
+    }
+  }
+}

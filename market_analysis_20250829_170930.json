@@ -1,0 +1,23 @@
+{
+  "timestamp": "20250829_170930",
+  "trading_dates": {
+    "today": "2025-08-29",
+    "prev": "2025-08-28"
+  },
+  "data": {
+    "index": {
+      "today": 24233.1,
+      "prev": 24236.45,
+      "today_time": "2025-08-29 13:30:00",
+      "prev_time": "2025-08-28 13:30:00"
+    },
+    "margin": {
+      "today": null,
+      "prev": 167.084
+    },
+    "futures": {
+      "today": null,
+      "prev": null
+    },
+    "foreign": {
+      "today": 

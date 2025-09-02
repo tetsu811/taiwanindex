@@ -1,0 +1,67 @@
+{
+  "timestamp": "20250829_180823",
+  "trading_dates": {
+    "today": "2025-08-29",
+    "prev": "2025-08-28"
+  },
+  "data": {
+    "index": {
+      "today": 24233.1,
+      "prev": 24236.45,
+      "today_time": "2025-08-29 13:30:00",
+      "prev_time": "2025-08-28 13:30:00"
+    },
+    "margin": {
+      "today": null,
+      "prev": 96.20083052794483
+    },
+    "futures": {
+      "today": {
+        "contract_date": "202509",
+        "close": 24414.0,
+        "spread_per": 0.78,
+        "volume": 37140
+      },
+      "prev": {
+        "contract_date": "202509",
+        "close": 24351.0,
+        "spread_per": -0.46,
+        "volume": 36367
+      }
+    },
+    "futures_foreign": {
+      "today": 47651,
+      "prev": 47255
+    },
+    "foreign": {
+      "today": -268592469,
+      "prev": 19636410,
+      "today_buy": 1469378765,
+      "today_sell": 1737971234,
+      "prev_buy": 1608017748,
+      "prev_sell": 1588381338
+    },
+    "bank": {
+      "today": null,
+      "prev": 2872816580.310005,
+      "today_buy": null,
+      "today_sell": null,
+      "prev_buy": 55131303933.47,
+      "prev_sell": 52258487353.159996
+    },
+    "stock": {
+      "today": {
+        "up": 9264,
+        "down": 8736,
+        "flat": 27367,
+        "total": 45367
+      },
+      "prev": {
+        "up": 8642,
+        "down": 9476,
+        "flat": 27060,
+        "total": 45178
+      }
+    }
+  }
+}

@@ -1,0 +1,289 @@
+{
+  "timestamp": "20250829_170234",
+  "successful_datasets": {
+    "期貨選擇權總覽": [],
+    "期貨日成交資訊": [
+      {
+        "dataset": "TaiwanFuturesDaily",
+        "shape": [
+          1953,
+          13
+        ],
+        "columns": [
+          "date",
+          "futures_id",
+          "contract_date",
+          "open",
+          "max",
+          "min",
+          "close",
+          "spread",
+          "spread_per",
+          "volume",
+          "settlement_price",
+          "open_interest",
+          "trading_session"
+        ]
+      }
+    ],
+    "選擇權日成交資訊": [
+      {
+        "dataset": "TaiwanOptionDaily",
+        "shape": [
+          6199,
+          13
+        ],
+        "columns": [
+          "date",
+          "option_id",
+          "contract_date",
+          "strike_price",
+          "call_put",
+          "open",
+          "max",
+          "min",
+          "close",
+          "volume",
+          "settlement_price",
+          "open_interest",
+          "trading_session"
+        ]
+      }
+    ],
+    "期貨交易明細": [
+      {
+        "dataset": "TaiwanFuturesTick",
+        "shape": [
+          342039,
+          5
+        ],
+        "columns": [
+          "contract_date",
+          "date",
+          "futures_id",
+          "price",
+          "volume"
+        ]
+      }
+    ],
+    "選擇權交易明細": [
+      {
+        "dataset": "TaiwanOptionTick",
+        "shape": [
+          445406,
+          7
+        ],
+        "columns": [
+          "ExercisePrice",
+          "PutCall",
+          "contract_date",
+          "date",
+          "option_id",
+          "price",
+          "volume"
+        ]
+      }
+    ],
+    "期貨三大法人買賣": [
+      {
+        "dataset": "TaiwanFuturesInstitutionalInvestors",
+        "shape": [
+          66,
+          11
+        ],
+        "columns": [
+          "futures_id",
+          "date",
+          "institutional_investors",
+          "long_deal_volume",
+          "long_deal_amount",
+          "short_deal_volume",
+          "short_deal_amount",
+          "long_open_interest_balance_volume",
+          "long_open_interest_balance_amount",
+          "short_open_interest_balance_volume",
+          "short_open_interest_balance_amount"
+        ]
+      }
+    ],
+    "選擇權三大法人買賣": [
+      {
+        "dataset": "TaiwanOptionInstitutionalInvestors",
+        "shape": [
+          30,
+          12
+        ],
+        "columns": [
+          "option_id",
+          "date",
+          "call_put",
+          "institutional_investors",
+          "long_deal_volume",
+          "long_deal_amount",
+          "short_deal_volume",
+          "short_deal_amount",
+          "long_open_interest_balance_volume",
+          "long_open_interest_balance_amount",
+          "short_open_interest_balance_volume",
+          "short_open_interest_balance_amount"
+        ]
+      }
+    ],
+    "期貨夜盤三大法人買賣": [
+      {
+        "dataset": "TaiwanFuturesInstitutionalInvestorsAfterHours",
+        "shape": [
+          33,
+          7
+        ],
+        "columns": [
+          "futures_id",
+          "date",
+          "institutional_investors",
+          "long_deal_volume",
+          "long_deal_amount",
+          "short_deal_volume",
+          "short_deal_amount"
+        ]
+      }
+    ],
+    "選擇權夜盤三大法人買賣": [
+      {
+        "dataset": "TaiwanOptionInstitutionalInvestorsAfterHours",
+        "shape": [
+          6,
+          8
+        ],
+        "columns": [
+          "option_id",
+          "date",
+          "call_put",
+          "institutional_investors",
+          "long_deal_volume",
+          "long_deal_amount",
+          "short_deal_volume",
+          "short_deal_amount"
+        ]
+      }
+    ],
+    "期貨各卷商每日交易": [
+      {
+        "dataset": "TaiwanFuturesDealerTradingVolumeDaily",
+        "shape": [
+          5163,
+          6
+        ],
+        "columns": [
+          "date",
+          "dealer_code",
+          "dealer_name",
+          "futures_id",
+          "volume",
+          "is_after_hour"
+        ]
+      }
+    ],
+    "選擇權各卷商每日交易": [
+      {
+        "dataset": "TaiwanOptionDealerTradingVolumeDaily",
+        "shape": [
+          845,
+          6
+        ],
+        "columns": [
+          "date",
+          "dealer_code",
+          "dealer_name",
+          "option_id",
+          "volume",
+          "is_after_hour"
+        ]
+      }
+    ],
+    "期貨大額交易人未沖銷部位": [
+      {
+        "dataset": "TaiwanFuturesOpenInterestLargeTraders",
+        "shape": [
+          575,
+          21
+        ],
+        "columns": [
+          "name",
+          "contract_type",
+          "buy_top5_trader_open_interest",
+          "buy_top5_trader_open_interest_per",
+          "buy_top10_trader_open_interest",
+          "buy_top10_trader_open_interest_per",
+          "sell_top5_trader_open_interest",
+          "sell_top5_trader_open_interest_per",
+          "sell_top10_trader_open_interest",
+          "sell_top10_trader_open_interest_per",
+          "market_open_interest",
+          "buy_top5_specific_open_interest",
+          "buy_top5_specific_open_interest_per",
+          "buy_top10_specific_open_interest",
+          "buy_top10_specific_open_interest_per",
+          "sell_top5_specific_open_interest",
+          "sell_top5_specific_open_interest_per",
+          "sell_top10_specific_open_interest",
+          "sell_top10_specific_open_interest_per",
+          "date",
+          "futures_id"
+        ]
+      }
+    ],
+    "選擇權大額交易人未沖銷部位": [
+      {
+        "dataset": "TaiwanOptionOpenInterestLargeTraders",
+        "shape": [
+          210,
+          22
+        ],
+        "columns": [
+          "contract_type",
+          "buy_top5_trader_open_interest",
+          "buy_top5_trader_open_interest_per",
+          "buy_top10_trader_open_interest",
+          "buy_top10_trader_open_interest_per",
+          "sell_top5_trader_open_interest",
+          "sell_top5_trader_open_interest_per",
+          "sell_top10_trader_open_interest",
+          "sell_top10_trader_open_interest_per",
+          "market_open_interest",
+          "buy_top5_specific_open_interest",
+          "buy_top5_specific_open_interest_per",
+          "buy_top10_specific_open_interest",
+          "buy_top10_specific_open_interest_per",
+          "sell_top5_specific_open_interest",
+          "sell_top5_specific_open_interest_per",
+          "sell_top10_specific_open_interest",
+          "sell_top10_specific_open_interest_per",
+          "date",
+          "put_call",
+          "name",
+          "option_id"
+        ]
+      }
+    ]
+  },
+  "failed_datasets": {
+    "期貨選擇權總覽": [
+      {
+        "dataset": "TaiwanOptionFutureInfo",
+        "error": "HTTP 422"
+      }
+    ],
+    "期貨日成交資訊": [],
+    "選擇權日成交資訊": [],
+    "期貨交易明細": [],
+    "選擇權交易明細": [],
+    "期貨三大法人買賣": [],
+    "選擇權三大法人買賣": [],
+    "期貨夜盤三大法人買賣": [],
+    "選擇權夜盤三大法人買賣": [],
+    "期貨各卷商每日交易": [],
+    "選擇權各卷商每日交易": [],
+    "期貨大額交易人未沖銷部位": [],
+    "選擇權大額交易人未沖銷部位": []
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "timestamp": "20250829_165419",
+  "successful_datasets": {
+    "期貨空單": [],
+    "0050正2指數外資庫存": [],
+    "八大行庫買超": [],
+    "加權指數": [],
+    "櫃買指數": [],
+    "漲跌家數": [],
+    "融資融券": [],
+    "台幣匯率": []
+  },
+  "failed_datasets": {
+    "期貨空單": [
+      {
+        "dataset": "TaiwanFuturesDaily",
+        "error": "無資料"
+      },
+      {
+        "dataset": "TaiwanFuturesInstitutionalInvestors",
+        "error": "無資料"
+      },
+      {
+        "dataset": "TaiwanFuturesMarginPurchase",
+        "error": "HTTP 422"
+      },
+      {
+        "dataset": "TaiwanFuturesShortSale",
+        "error": "HTTP 422"
+      }
+    ],
+    "0050正2指數外資庫存": [
+      {
+        "dataset": "TaiwanStockPrice",
+        "error": "無資料"
+      },
+      {
+        "dataset": "TaiwanStockInstitutionalInvestorsBuySell",
+        "error": "無資料"
+      },
+      {
+        "dataset": "TaiwanStockETF",
+        "error": "HTTP 422"
+      }
+    ],
+    "八大行庫買超": [
+      {
+        "dataset": "TaiwanStockGovernmentBankBuySell",
+        "error": "無資料"
+      },
+      {
+        "dataset": "TaiwanStockInstitutionalInvestorsBuySell",
+        "error": "無資料"
+      }
+    ],
+    "加權指數": [
+      {
+        "dataset": "TaiwanStockIndex",
+        "error": "HTTP 422"
+      },
+      {
+        "dataset": "TaiwanStockPrice",
+        "error": "無資料"
+      },
+      {
+        "dataset": "TaiwanStockTradingDailyReport",
+        "error": "HTTP 400"
+      }
+    ],
+    "櫃買指數": [
+      {
+        "dataset": "TaiwanStockIndex",
+        "error": "HTTP 422"
+      },
+      {
+        "dataset": "TaiwanStockPrice",
+        "error": "無資料"
+      }
+    ],
+    "漲跌家數": [
+      {
+        "dataset": "TaiwanStockPrice",
+        "error": "無資料"
+      },
+      {
+        "dataset": "TaiwanStockTradingDailyReport",
+        "error": "HTTP 400"
+      }
+    ],
+    "融資融券": [
+      {
+        "dataset": "TaiwanStockMarginPurchase",
+        "error": "HTTP 422"
+      },
+      {
+        "dataset": "TaiwanStockShortSale",
+        "error": "HTTP 422"
+      }
+    ],
+    "台幣匯率": [
+      {
+        "dataset": "TaiwanExchangeRate",
+        "error": "無資料"
+      },
+      {
+        "dataset": "ExchangeRate",
+        "error": "無資料"
+      }
+    ]
+  }
+}

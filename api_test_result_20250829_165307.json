@@ -1,0 +1,111 @@
+{
+  "timestamp": "20250829_165307",
+  "successful_datasets": {
+    "期貨空單": [],
+    "0050正2指數外資庫存": [],
+    "八大行庫買超": [],
+    "加權指數": [],
+    "櫃買指數": [],
+    "漲跌家數": [],
+    "融資融券": [],
+    "台幣匯率": []
+  },
+  "failed_datasets": {
+    "期貨空單": [
+      {
+        "dataset": "TaiwanFuturesDaily",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanFuturesInstitutionalInvestors",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanFuturesMarginPurchase",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanFuturesShortSale",
+        "error": "HTTP 405"
+      }
+    ],
+    "0050正2指數外資庫存": [
+      {
+        "dataset": "TaiwanStockPrice",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanStockInstitutionalInvestorsBuySell",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanStockETF",
+        "error": "HTTP 405"
+      }
+    ],
+    "八大行庫買超": [
+      {
+        "dataset": "TaiwanStockGovernmentBankBuySell",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanStockInstitutionalInvestorsBuySell",
+        "error": "HTTP 405"
+      }
+    ],
+    "加權指數": [
+      {
+        "dataset": "TaiwanStockIndex",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanStockPrice",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanStockTradingDailyReport",
+        "error": "HTTP 405"
+      }
+    ],
+    "櫃買指數": [
+      {
+        "dataset": "TaiwanStockIndex",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanStockPrice",
+        "error": "HTTP 405"
+      }
+    ],
+    "漲跌家數": [
+      {
+        "dataset": "TaiwanStockPrice",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanStockTradingDailyReport",
+        "error": "HTTP 405"
+      }
+    ],
+    "融資融券": [
+      {
+        "dataset": "TaiwanStockMarginPurchase",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "TaiwanStockShortSale",
+        "error": "HTTP 405"
+      }
+    ],
+    "台幣匯率": [
+      {
+        "dataset": "TaiwanExchangeRate",
+        "error": "HTTP 405"
+      },
+      {
+        "dataset": "ExchangeRate",
+        "error": "HTTP 405"
+      }
+    ]
+  }
+}

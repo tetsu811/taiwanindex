@@ -1,0 +1,38 @@
+name: 台股分析每日推播
+
+on:
+  schedule:
+    # 每天晚上 6 點執行 (UTC 10:00 = 台灣時間 18:00)
+    - cron: '0 10 * * 1-5'
+  workflow_dispatch: # 允許手動觸發
+
+jobs:
+  push-notification:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 檢出代碼
+      uses: actions/checkout@v3
+      
+    - name: 設置 Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: 安裝依賴
+      run: |
+        pip install requests pandas
+        
+    - name: 執行推播腳本
+      env:
+        LINE_CHANNEL_ACCESS_TOKEN: ${{ secrets.LINE_CHANNEL_ACCESS_TOKEN }}
+        LINE_USER_ID: ${{ secrets.LINE_USER_ID }}
+      run: |
+        python cloud_market_analysis.py
+        
+    - name: 上傳日誌
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: push-logs
+        path: cloud_market_analysis.log

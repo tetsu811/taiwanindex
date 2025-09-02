@@ -1,0 +1,101 @@
+{
+  "timestamp": "20250829_165952",
+  "successful_datasets": {
+    "台股權證資訊": [],
+    "台股逐筆資料": [],
+    "台股5秒指標": [
+      {
+        "dataset": "TaiwanVariousIndicators5Seconds",
+        "shape": [
+          3241,
+          2
+        ],
+        "columns": [
+          "date",
+          "TAIEX"
+        ]
+      }
+    ],
+    "三大法人買賣超": [
+      {
+        "dataset": "TaiwanStockInstitutionalInvestorsBuySell",
+        "shape": [
+          96530,
+          5
+        ],
+        "columns": [
+          "date",
+          "stock_id",
+          "buy",
+          "name",
+          "sell"
+        ]
+      }
+    ],
+    "三大法人持股": [
+      {
+        "dataset": "TaiwanStockTotalInstitutionalInvestors",
+        "shape": [
+          12,
+          4
+        ],
+        "columns": [
+          "buy",
+          "date",
+          "name",
+          "sell"
+        ]
+      }
+    ],
+    "融資融券維持率": [
+      {
+        "dataset": "TaiwanTotalExchangeMarginMaintenance",
+        "shape": [
+          2,
+          2
+        ],
+        "columns": [
+          "date",
+          "TotalExchangeMarginMaintenance"
+        ]
+      }
+    ],
+    "八大行庫買賣": [
+      {
+        "dataset": "TaiwanStockGovernmentBankBuySell",
+        "shape": [
+          10881,
+          7
+        ],
+        "columns": [
+          "date",
+          "stock_id",
+          "buy_amount",
+          "sell_amount",
+          "buy",
+          "sell",
+          "bank_name"
+        ]
+      }
+    ]
+  },
+  "failed_datasets": {
+    "台股權證資訊": [
+      {
+        "dataset": "TaiwanStockInfoWithWarrant",
+        "error": "無資料"
+      }
+    ],
+    "台股逐筆資料": [
+      {
+        "dataset": "TaiwanStockPriceTick",
+        "error": "HTTP 400"
+      }
+    ],
+    "台股5秒指標": [],
+    "三大法人買賣超": [],
+    "三大法人持股": [],
+    "融資融券維持率": [],
+    "八大行庫買賣": []
+  }
+}
