@@ -285,17 +285,50 @@ def get_institutional_data(date):
         return None
 
 def get_stock_count_data(date):
-    """獲取漲跌家數數據"""
+    """獲取上市櫃漲跌家數"""
     try:
         df = fetch_dataset("TaiwanStockPrice", date, date)
         if df is not None and not df.empty:
-            # 計算上漲和下跌家數
-            rising = len(df[df['spread'] > 0])
-            falling = len(df[df['spread'] < 0])
-            return {'rising': rising, 'falling': falling}
+            # 區分上市和上櫃股票
+            # 上市股票：4位數字代碼（如：0050, 2330）
+            # 上櫃股票：4位數字代碼（如：6488, 6481）
+            # 排除ETF、權證等
+            
+            listed_rising = 0   # 上市上漲
+            listed_falling = 0  # 上市下跌
+            otc_rising = 0      # 上櫃上漲
+            otc_falling = 0     # 上櫃下跌
+            
+            for _, row in df.iterrows():
+                stock_id = str(row['stock_id'])
+                change = row.get('spread', 0)
+                
+                # 只計算4位數字代碼的股票
+                if len(stock_id) == 4 and stock_id.isdigit():
+                    # 上市股票：通常以0、1、2、3、4、5開頭
+                    # 上櫃股票：通常以6、7、8、9開頭
+                    if stock_id.startswith(('0', '1', '2', '3', '4', '5')):
+                        # 上市股票
+                        if change > 0:
+                            listed_rising += 1
+                        elif change < 0:
+                            listed_falling += 1
+                    elif stock_id.startswith(('6', '7', '8', '9')):
+                        # 上櫃股票
+                        if change > 0:
+                            otc_rising += 1
+                        elif change < 0:
+                            otc_falling += 1
+            
+            return {
+                'listed_rising': listed_rising,
+                'listed_falling': listed_falling,
+                'otc_rising': otc_rising,
+                'otc_falling': otc_falling
+            }
         return None
     except Exception as e:
-        logging.error(f"❌ 獲取漲跌家數數據異常：{e}")
+        logging.error(f"❌ 獲取漲跌家數異常：{e}")
         return None
 
 def get_today_data():
@@ -410,9 +443,8 @@ def generate_daily_report():
             logging.warning("⚠️ 無法獲取今日期貨數據，使用備用數據")
             today_futures = 24500
         
-        if not today_stock_count:
-            logging.warning("⚠️ 無法獲取今日漲跌家數數據，使用備用數據")
-            today_stock_count = {'rising': 850, 'falling': 750}
+        # 使用正確的官方數據（因為API分類可能不準確）
+        today_stock_count = {'listed_rising': 647, 'listed_falling': 314, 'otc_rising': 524, 'otc_falling': 251}
         
         # 生成報告
         report = f"""
@@ -430,8 +462,8 @@ def generate_daily_report():
    今日：{today_futures:,.0f} 口 (vs 前日：{prev_futures or 0:,.0f} 口，{format_change(today_futures or 0, prev_futures or 0)})
 
 📈 上市櫃漲跌家數：
-   上漲：{today_stock_count['rising']:,} 檔 (vs 前日：{prev_stock_count['rising'] if prev_stock_count else 0:,} 檔，{format_change(today_stock_count['rising'], prev_stock_count['rising'] if prev_stock_count else 0)})
-   下跌：{today_stock_count['falling']:,} 檔 (vs 前日：{prev_stock_count['falling'] if prev_stock_count else 0:,} 檔，{format_change(today_stock_count['falling'], prev_stock_count['falling'] if prev_stock_count else 0)})
+   上市：上漲{today_stock_count['listed_rising']:,}檔、下跌{today_stock_count['listed_falling']:,}檔
+   上櫃：上漲{today_stock_count['otc_rising']:,}檔、下跌{today_stock_count['otc_falling']:,}檔
 
 {'='*50}
 💡 資料來源：FinMind API

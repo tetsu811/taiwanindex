@@ -191,3 +191,91 @@
 2025-09-03 22:26:19,588 - INFO - ✅ LINE 廣播推播發送成功！
 2025-09-03 22:26:19,589 - INFO - 🎉 台股分析報告已成功發送到所有 LINE 用戶！
 2025-09-03 22:26:19,590 - INFO - ==================================================
+2025-09-03 23:14:24,750 - INFO - 🚀 台股市場分析雲端自動化腳本啟動
+2025-09-03 23:14:24,750 - INFO - ==================================================
+2025-09-03 23:14:24,750 - INFO - 📝 生成每日分析報告...
+2025-09-03 23:14:25,033 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:14:25,035 - INFO - 📅 今日日期：2025-09-03，前一日：2025-09-02
+2025-09-03 23:14:25,284 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:14:25,569 - INFO - ✅ 成功獲取 TaiwanFuturesInstitutionalInvestors 數據
+2025-09-03 23:14:27,791 - INFO - ✅ 成功獲取 TaiwanStockInstitutionalInvestorsBuySell 數據
+2025-09-03 23:14:30,394 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:15:12,355 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:15:12,643 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:15:12,924 - INFO - ✅ 成功獲取 TaiwanFuturesInstitutionalInvestors 數據
+2025-09-03 23:15:14,961 - INFO - ✅ 成功獲取 TaiwanStockInstitutionalInvestorsBuySell 數據
+2025-09-03 23:15:17,417 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:15:59,750 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:15:59,798 - INFO - 📱 發送 LINE 推播...
+2025-09-03 23:15:59,798 - INFO - 📤 正在發送 LINE 推播...
+2025-09-03 23:15:59,999 - INFO - ✅ LINE 推播發送成功！
+2025-09-03 23:16:00,000 - INFO - 📤 正在發送 LINE 廣播推播...
+2025-09-03 23:16:00,178 - INFO - ✅ LINE 廣播推播發送成功！
+2025-09-03 23:16:00,180 - INFO - 🎉 台股分析報告已成功發送到所有 LINE 用戶！
+2025-09-03 23:16:00,180 - INFO - ==================================================
+2025-09-03 23:20:00,351 - INFO - 🚀 台股市場分析雲端自動化腳本啟動
+2025-09-03 23:20:00,352 - INFO - ==================================================
+2025-09-03 23:20:00,352 - INFO - 📝 生成每日分析報告...
+2025-09-03 23:20:00,645 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:20:00,648 - INFO - 📅 今日日期：2025-09-03，前一日：2025-09-02
+2025-09-03 23:20:00,939 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:20:01,125 - INFO - ✅ 成功獲取 TaiwanFuturesInstitutionalInvestors 數據
+2025-09-03 23:20:03,520 - INFO - ✅ 成功獲取 TaiwanStockInstitutionalInvestorsBuySell 數據
+2025-09-03 23:20:06,013 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:20:50,084 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:20:50,842 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:20:51,133 - INFO - ✅ 成功獲取 TaiwanFuturesInstitutionalInvestors 數據
+2025-09-03 23:20:53,601 - INFO - ✅ 成功獲取 TaiwanStockInstitutionalInvestorsBuySell 數據
+2025-09-03 23:20:55,975 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:21:38,375 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:21:38,887 - INFO - 📱 發送 LINE 推播...
+2025-09-03 23:21:38,888 - INFO - 📤 正在發送 LINE 推播...
+2025-09-03 23:21:39,118 - INFO - ✅ LINE 推播發送成功！
+2025-09-03 23:21:39,118 - INFO - 📤 正在發送 LINE 廣播推播...
+2025-09-03 23:21:39,409 - INFO - ✅ LINE 廣播推播發送成功！
+2025-09-03 23:21:39,410 - INFO - 🎉 台股分析報告已成功發送到所有 LINE 用戶！
+2025-09-03 23:21:39,410 - INFO - ==================================================
+2025-09-03 23:22:43,620 - INFO - 🚀 台股市場分析雲端自動化腳本啟動
+2025-09-03 23:22:43,620 - INFO - ==================================================
+2025-09-03 23:22:43,620 - INFO - 📝 生成每日分析報告...
+2025-09-03 23:22:43,902 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:22:43,907 - INFO - 📅 今日日期：2025-09-03，前一日：2025-09-02
+2025-09-03 23:22:44,163 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:22:44,444 - INFO - ✅ 成功獲取 TaiwanFuturesInstitutionalInvestors 數據
+2025-09-03 23:22:46,527 - INFO - ✅ 成功獲取 TaiwanStockInstitutionalInvestorsBuySell 數據
+2025-09-03 23:22:49,393 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:23:31,392 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:23:32,246 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:23:32,539 - INFO - ✅ 成功獲取 TaiwanFuturesInstitutionalInvestors 數據
+2025-09-03 23:23:35,202 - INFO - ✅ 成功獲取 TaiwanStockInstitutionalInvestorsBuySell 數據
+2025-09-03 23:23:37,915 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:24:19,921 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:24:20,417 - INFO - 📱 發送 LINE 推播...
+2025-09-03 23:24:20,417 - INFO - 📤 正在發送 LINE 推播...
+2025-09-03 23:24:20,644 - INFO - ✅ LINE 推播發送成功！
+2025-09-03 23:24:20,645 - INFO - 📤 正在發送 LINE 廣播推播...
+2025-09-03 23:24:20,841 - INFO - ✅ LINE 廣播推播發送成功！
+2025-09-03 23:24:20,842 - INFO - 🎉 台股分析報告已成功發送到所有 LINE 用戶！
+2025-09-03 23:24:20,842 - INFO - ==================================================
+2025-09-03 23:24:37,667 - INFO - 🚀 台股市場分析雲端自動化腳本啟動
+2025-09-03 23:24:37,667 - INFO - ==================================================
+2025-09-03 23:24:37,667 - INFO - 📝 生成每日分析報告...
+2025-09-03 23:24:37,956 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:24:37,960 - INFO - 📅 今日日期：2025-09-03，前一日：2025-09-02
+2025-09-03 23:24:38,334 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:24:38,524 - INFO - ✅ 成功獲取 TaiwanFuturesInstitutionalInvestors 數據
+2025-09-03 23:24:41,007 - INFO - ✅ 成功獲取 TaiwanStockInstitutionalInvestorsBuySell 數據
+2025-09-03 23:24:43,797 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:25:27,891 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:25:28,651 - INFO - ✅ 成功獲取 TaiwanVariousIndicators5Seconds 數據
+2025-09-03 23:25:28,825 - INFO - ✅ 成功獲取 TaiwanFuturesInstitutionalInvestors 數據
+2025-09-03 23:25:31,346 - INFO - ✅ 成功獲取 TaiwanStockInstitutionalInvestorsBuySell 數據
+2025-09-03 23:25:33,968 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:26:16,579 - INFO - ✅ 成功獲取 TaiwanStockPrice 數據
+2025-09-03 23:26:17,086 - INFO - 📱 發送 LINE 推播...
+2025-09-03 23:26:17,086 - INFO - 📤 正在發送 LINE 推播...
+2025-09-03 23:26:17,268 - INFO - ✅ LINE 推播發送成功！
+2025-09-03 23:26:17,269 - INFO - 📤 正在發送 LINE 廣播推播...
+2025-09-03 23:26:17,449 - INFO - ✅ LINE 廣播推播發送成功！
+2025-09-03 23:26:17,451 - INFO - 🎉 台股分析報告已成功發送到所有 LINE 用戶！
+2025-09-03 23:26:17,451 - INFO - ==================================================
