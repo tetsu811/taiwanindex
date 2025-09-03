@@ -216,7 +216,11 @@ def get_futures_data(date):
             foreign_tx = df[(df['institutional_investors'] == '外資') & (df['futures_id'] == 'TX')]
             if not foreign_tx.empty:
                 latest = foreign_tx.iloc[-1]
-                return float(latest.get('short_open_interest_balance_volume', 0))
+                # 計算淨未平倉（多單 - 空單）
+                long_oi = float(latest.get('long_open_interest_balance_volume', 0))
+                short_oi = float(latest.get('short_open_interest_balance_volume', 0))
+                net_oi = long_oi - short_oi
+                return net_oi
         return None
     except Exception as e:
         logging.error(f"❌ 獲取期貨數據異常：{e}")
@@ -225,21 +229,56 @@ def get_futures_data(date):
 def get_institutional_data(date):
     """獲取三大法人數據"""
     try:
-        df = fetch_dataset("TaiwanStockInstitutionalInvestorsBuySell", date, date)
-        if df is not None and not df.empty:
+        # 獲取三大法人買賣數據
+        df_institutional = fetch_dataset("TaiwanStockInstitutionalInvestorsBuySell", date, date)
+        # 獲取股價數據
+        df_price = fetch_dataset("TaiwanStockPrice", date, date)
+        
+        if df_institutional is not None and not df_institutional.empty and df_price is not None and not df_price.empty:
             # 計算外資和投信的淨買賣
-            foreign_data = df[df['name'] == 'Foreign_Investor']
-            trust_data = df[df['name'] == 'Investment_Trust']
+            foreign_data = df_institutional[df_institutional['name'] == 'Foreign_Investor']
+            trust_data = df_institutional[df_institutional['name'] == 'Investment_Trust']
             
             foreign_net = 0
             trust_net = 0
             
+            # 計算外資淨買賣金額
             if not foreign_data.empty:
-                foreign_net = float(foreign_data['buy'].sum() - foreign_data['sell'].sum()) / 100000000  # 轉換為億
+                for _, row in foreign_data.iterrows():
+                    stock_id = row['stock_id']
+                    buy_volume = row['buy']
+                    sell_volume = row['sell']
+                    
+                    # 找到對應的股價
+                    stock_price_data = df_price[df_price['stock_id'] == stock_id]
+                    if not stock_price_data.empty:
+                        price = stock_price_data.iloc[0]['close']
+                        # 計算金額（股數 * 股價）
+                        buy_amount = buy_volume * price
+                        sell_amount = sell_volume * price
+                        foreign_net += buy_amount - sell_amount
+            
+            # 計算投信淨買賣金額
             if not trust_data.empty:
-                trust_net = float(trust_data['buy'].sum() - trust_data['sell'].sum()) / 100000000  # 轉換為億
+                for _, row in trust_data.iterrows():
+                    stock_id = row['stock_id']
+                    buy_volume = row['buy']
+                    sell_volume = row['sell']
+                    
+                    # 找到對應的股價
+                    stock_price_data = df_price[df_price['stock_id'] == stock_id]
+                    if not stock_price_data.empty:
+                        price = stock_price_data.iloc[0]['close']
+                        # 計算金額（股數 * 股價）
+                        buy_amount = buy_volume * price
+                        sell_amount = sell_volume * price
+                        trust_net += buy_amount - sell_amount
+            
+            # 轉換為億
+            foreign_net_billion = foreign_net / 100000000
+            trust_net_billion = trust_net / 100000000
                 
-            return {'foreign': foreign_net, 'trust': trust_net}
+            return {'foreign': foreign_net_billion, 'trust': trust_net_billion}
         return None
     except Exception as e:
         logging.error(f"❌ 獲取三大法人數據異常：{e}")
