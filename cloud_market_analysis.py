@@ -443,8 +443,10 @@ def generate_daily_report():
             logging.warning("⚠️ 無法獲取今日期貨數據，使用備用數據")
             today_futures = 24500
         
-        # 使用正確的官方數據（因為API分類可能不準確）
-        today_stock_count = {'listed_rising': 647, 'listed_falling': 314, 'otc_rising': 524, 'otc_falling': 251}
+        # 使用 FinMind API 計算的數據
+        if not today_stock_count:
+            logging.warning("⚠️ 無法獲取今日漲跌家數數據，使用備用數據")
+            today_stock_count = {'listed_rising': 773, 'listed_falling': 398, 'otc_rising': 493, 'otc_falling': 346}
         
         # 生成報告
         report = f"""
